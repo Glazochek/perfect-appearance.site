@@ -1,0 +1,35 @@
+{% load static%}
+
+<div class="loud-img">
+  <div class="tx-1">{{ name }}</div>
+  {% if img != '0' %}
+  <img class="img-like" src="{% static 'face_images/' %}{{ gender }}/{{ img }}">
+  {% endif %}
+      <div class="btns-img">
+        {% if not first %}
+    <a class="befors" href="">
+      <img class="next befor" src="{% static 'imgs/right-arrow.png' %}" alt="#">
+    </a>
+        {% endif %}
+
+        {% if not last %}
+    <a class="likes nexts" href="{% url 'like' gender id %}">
+      <img class="like" src="{% static 'imgs/like.png' %}" alt="#">
+    </a>
+    <a class="nexts" href="">
+      <img class="next" src="{% static 'imgs/right-arrow.png' %}" alt="#">
+    </a>
+        {% else %}
+    <a class="likes" href="{% url 'like' gender id %}">
+      <img class="like" src="{% static 'imgs/like.png' %}" alt="#">
+    </a>
+       {% endif %}
+  </div>
+  {% if n > 1 %}
+    <a class="result active" href="{% url 'create_img' gender like_list %}">See result</a>
+  {% else %}
+    <a class="result">See result</a>
+  {% endif %}
+</div>
+
+

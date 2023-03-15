@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/FaceAverage/perfect_appearance/Facer" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Facer" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/IFAN" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/perfect_appearance/Facer" vcs="Git" />
+  </component>
+</project>

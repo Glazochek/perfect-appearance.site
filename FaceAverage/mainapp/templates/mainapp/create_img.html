@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load static%}
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Find perfect appearance</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'js/img.js' %}">
+      <script>
+  window.onload = function () {
+  document.body.classList.add('loaded_hiding');
+  window.setTimeout(function () {
+  document.body.classList.add('loaded');
+  document.body.classList.remove('loaded_hiding');
+}, 50);
+}</script>
+  </head>
+  <body>
+<div class="preloader">
+  <div class="preloader__image"></div>
+</div>
+  <div class="block-general-rtn">
+      <div class="block-rtn">
+      <img class="img-rtn" src="{% static name_img %}" alt="">
+        <div class="tx-3">
+    {% for p in peoples %}
+     {% if p != last %}{{ p }} +
+     {% else %}{{ p }}
+          {% endif %}
+    {% endfor %}
+  </div>
+  </div>
+
+  <div class="btns-botomm">
+    <button class="back"><a href="{% url 'main' %}">Back</a></button>
+  </div>
+  </div>
+  </body>
+</html>

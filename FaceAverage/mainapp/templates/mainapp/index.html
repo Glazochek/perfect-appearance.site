@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{% load static%}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Find perfect appearance</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <script>
+  window.onload = function () {
+  document.body.classList.add('loaded_hiding');
+  window.setTimeout(function () {
+  document.body.classList.add('loaded');
+  document.body.classList.remove('loaded_hiding');
+}, 50);
+}</script>
+</head>
+
+<body>
+<div class="preloader">
+  <div class="preloader__image"></div>
+</div>
+  <div class="block-1">
+    <div class="blocks-imgs-gen">
+      <div class="block-1">
+        <img src="{% static 'imgs/img-geberal-1.jpg' %}" class="general-img">
+        <img src="{% static 'imgs/img-geberal-2.jpeg' %}" class="general-img">
+      </div>
+      <div class="block-1">
+        <img src="{% static 'imgs/img-geberal-3.jpeg' %}" class="general-img">
+        <img src="{% static 'imgs/img-geberal-4.jpeg' %}" class="general-img">
+      </div>
+
+    </div>
+
+    <div class="text-general">
+      Find your perfect appearance
+    </div>
+    <div class="btns">
+      <a class="ind-txt" href="{% url 'face_average_gender' 'boys' %}">Boys</a>
+      <a class="ind-txt" href="{% url 'face_average_gender' 'girls' %}">Girls</a>
+    </div>
+  </div>
+</body>
+</html>
