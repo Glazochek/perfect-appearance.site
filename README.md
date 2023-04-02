@@ -1,5 +1,9 @@
 # perfect-appearance.site
 
+![GitHub repo size](https://img.shields.io/github/repo-size/Glazochek/perfect-appearance.site)
+![GitHub language count](https://img.shields.io/github/languages/count/Glazochek/perfect-appearance.site)
+![GitHub top language](https://img.shields.io/github/languages/top/Glazochek/perfect-appearance.site)
+
 ## сайт, помогающий найти идеальную внешность.
 
 Написан на Django. Так же в нем используется нейросеть, которая ищет лица, что помогает основному алгоритму качественно склеивать несколько лиц в одно.
